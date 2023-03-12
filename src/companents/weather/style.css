@@ -1,0 +1,318 @@
+.body{
+    background-color: #1E1E1E;
+    width: 80vw;
+    height: 98vh;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.bigArea{
+    background-color: #222831;
+    width: 76vw;
+    height: 80vh;
+    border-radius: 50px;
+    display: grid;
+    grid-template-areas:
+    "weather searchArea"
+    "weather other";
+    
+    column-gap:6vw;
+    row-gap: 4vh;
+    padding:1rem 0rem 1rem 0rem ;
+    grid-template-rows: 38vh 38vh;
+    grid-template-columns:  35vw 31vw ;
+    opacity: 1;  
+}
+.weatherAreaImage{
+    background:  linear-gradient(135deg ,#84bcf16a 20%,#0b89fe7a 60% );
+    background-size: 43vw 94vh;
+    height: 94vh;
+    border-radius: 50px; 
+    overflow: hidden;
+}
+.weatherArea{
+    display: grid;
+    grid-area: weather;
+    background-image: url(../icons/bg.jpg);
+    background-size: 43vw 94vh;
+    opacity:1;
+    height: 94vh;
+    border-radius: 50px;
+    margin-top: -7vh;
+}
+.weatherAreaImage>div{
+    height: 90vh;
+    margin-top: 1vh;
+    padding-left: 4vw;
+    color:white;
+ 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.weatherAreaImage .top{
+    display: flex;
+    flex-direction: column;
+    height: 16vh;
+    max-width: 18rem;
+    justify-content: space-around;
+}
+.top #day{
+    color: #ffff;
+    font-size: 3.2rem;
+}
+.top #date{
+    font-size: 1.2rem;
+}
+.top #locations{
+    font-size: 1.1rem;  
+    font-weight: 540;;
+}
+
+.weatherAreaImage .bottom{
+    max-width: 19rem;
+    display: flex;
+    flex-direction: column;
+    height: 14rem;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.bottom #icon{
+    color: #ffff;
+    max-height:8rem;
+    max-width: 8rem;
+    padding: 0;
+    margin: 0;
+}
+.bottom #temp{
+    font-size: 3.3rem;
+}
+.bottom #weather{
+    font-size: 1.6rem;  
+   
+}
+
+
+.weatherAreaImage .chart{
+    width: 36vw;
+    min-height:35vh ;
+    margin-left: -4vw;
+}
+
+.searchArea{
+    display: grid;
+    grid-area: searchArea;
+    background-color: #272E37;
+    border-radius: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+   
+}
+.othersArea{
+    display: grid;
+    grid-area: other;
+    background-color: #272E37;
+    border-radius: 50px;
+
+   display: flex;
+   
+   justify-content: space-evenly;
+    align-items: center;
+}
+
+.othersArea>div{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    width: 20rem;
+    height: 10rem;
+}
+
+.othersArea>div>div{
+    background-color: #596A80;
+    border-radius: 10px;
+    width: 6rem;
+    height: 10rem;
+    display:flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 1.3rem;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFF;
+   
+    
+    font-size: 18px;
+}
+.othersArea>div>div>img{
+    width: 40px;
+    height: 40px;
+}
+.othersArea b{
+    font-size: 20px;
+}
+
+.wind b{
+    font-size: 14px;
+    margin-top: -.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .1rem;
+    text-align: center;
+}
+.slide{
+    width: 16vw;
+    height: auto;
+    max-height: 26vh;
+    border-radius: 0px 0px 15px 15px  ;
+    margin-bottom: 1vh;
+    display: block;
+    background-color: #596A80;
+}
+.slide>ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    overflow: auto;
+    max-height: 26vh;
+
+
+}
+.slide>ul>li{
+    border-bottom: 1px #1E1E1E solid;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 13vw;
+    list-style: none;
+    transition: all .6 linear;
+    
+}
+
+.slide>ul>li:hover{
+    cursor: pointer;
+    border-bottom: 2px #dadce0 solid; ;
+    background-color: #6c829e;
+    font-family: Montserrat;
+    font-size: large;
+}
+button{
+    background-color: none;
+    border: none;
+}
+.slide>ul::-webkit-scrollbar{
+    width: 15px;
+}
+.slide>ul::-webkit-scrollbar-thumb{
+    background: #dadce0;
+    
+    border-radius: 10px;
+    border:4px solid transparent;
+    background-clip: padding-box;
+   
+}
+
+.changeLoc{
+    width: 16vw;
+    min-width: 178px;
+    height: auto;
+    min-height: 40px;
+    border-radius: 15px;
+    background-color: #596A80;
+    overflow: hidden;
+    padding: 0;
+}
+.changeLocBtn{
+    display: flex;
+    justify-content: center;
+    width: 32vw;
+    min-width: 165px;
+    height: 6vh;
+    min-height: 40px;
+    border-radius: 15px ;
+    background-color: #596A80;
+    color: #FFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    top:0;
+    left: -16vw;
+    transition: all .3s ease-in-out;
+}
+.changeLoc>input[id='inputCheckbox']{
+    display: none;
+}
+
+.changeLoc>input[id='inputCheckbox']:checked + .changeLocBtn  {
+    top:0px;
+    left: 0px;  
+}
+.changeLoc>input[id='inputCheckbox']:not(:checked)+div+div{
+    display: none;
+}
+
+.ClText{
+    width: 16vw;
+    min-width: 178px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+     overflow: hidden;
+     background: linear-gradient(160deg,#A3E1FBE5,#0B89FEE5);
+}
+.ClText>img{
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+   
+}
+
+.ClText:hover{
+    width:13vw ;
+    margin-right: -2vw;
+    padding-right: 2vw;
+}
+.ClText>span{
+    position:relative;
+}
+.ClInput{
+    width: 16vw;
+    min-width: 178px;
+    background-color: #596A80;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ClInput>input[ id='inputSearch']{
+   width: 14vw;
+   height: 6vh;
+   min-height: 40px;
+   background-color: #f4f2f2;
+   text-align: center;
+   font-size: 1.5rem;
+   outline: none;
+   border-radius: 5px;
+}
