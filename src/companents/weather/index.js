@@ -36,7 +36,7 @@ function Weather() {
     }) 
   const [isLoading,setIsLoading] =useState(false) 
   const [cityU,setCityU]=useState([])
-  const appId = process.env.REACT_APP_API_KEY //add your openweathermap api key
+  const appId = process.env.REACT_APP_API_KEY //this is a hidden environment value. add your openweathermap api key.
 //
   useEffect(()=>{
     let cnt = false
